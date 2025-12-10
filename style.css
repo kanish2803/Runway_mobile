@@ -1,0 +1,56 @@
+body {
+    font-family: Arial;
+    background: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #999;
+}
+
+th, td {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.right {
+    text-align: right;
+}
+
+.btn {
+    padding: 8px 12px;
+    background: #222;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
