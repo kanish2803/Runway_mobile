@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bill Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>RUNWAY MOBILES - BILL</h2>
+
+    <!-- CUSTOMER INPUTS -->
+    <label>Customer Name:</label>
+    <input id="custName" placeholder="Enter customer name">
+
+    <label>Phone Number:</label>
+    <input id="custPhone" placeholder="Enter phone number">
+
+    <label>Bill Number:</label>
+    <input id="billNo" value="200">
+
+    <label>Date:</label>
+    <input id="billDate" type="date">
+
+    <label>GST Number:</label>
+    <input id="gstNo" value="33DZZPK8357M1Z8">
+
+    <hr style="margin:20px 0">
+
+    <!-- BILL TABLE -->
+    <table id="billTable">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>Rate (₹)</th>
+                <th>Amount (₹)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><textarea oninput="recalculate()" id="i1_desc">OnePlus Z2 Bullet</textarea></td>
+                <td><input type="number" id="i1_qty" value="1" oninput="recalculate()"></td>
+                <td><input type="number" id="i1_rate" value="1393.16" oninput="recalculate()"></td>
+                <td class="right" id="i1_amt">1393.16</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>CGST 9%</td>
+                <td>1</td>
+                <td><input type="number" id="cgst" value="152.91" oninput="recalculate()"></td>
+                <td class="right" id="cgst_amt">152.91</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>SGST 9%</td>
+                <td>1</td>
+                <td><input type="number" id="sgst" value="152.91" oninput="recalculate()"></td>
+                <td class="right" id="sgst_amt">152.91</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 class="right" style="margin-top:15px;">Total: ₹ <span id="total">1698.98</span></h3>
+
+    <button class="btn" onclick="window.print()">Print / Download PDF</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
